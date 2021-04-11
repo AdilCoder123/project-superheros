@@ -19,8 +19,8 @@ playerobject.scaleToWidth(150);
 playerobject.scaleToWidth(140);
 playerobject.set({
 
-    top:playery,
-    left:playerx
+    top:superheroy,
+    left:superherox
 });
 
 canvas.add(playerobject);
@@ -197,6 +197,51 @@ function new_image(get_image)
          }
 
        }
+
+
+       function up()
+{
+    if(superheroy>=0){
+        superheroy=superheroy-blockimageheight;
+       
+        canvas.remove(playerobject);
+        player_uptade();
+    }
+}
+
+
+function down()
+{
+    if(superheroy<=500){
+        superheroy=superheroy+blockimageheight;
+        
+        canvas.remove(playerobject);
+        player_uptade();
+    }
+}
+
+
+
+function left()
+{
+    if(superherox>=0){
+        superherox=superherox-blockimagewidth;
+        
+        canvas.remove(playerobject);
+        player_uptade();
+    }
+}
+
+
+function right()
+{
+    if(superherox<=850){
+        superherox=superherox+blockimagewidth;
+        
+        canvas.remove(playerobject);
+        player_uptade();
+    }
+}
        
 
        
